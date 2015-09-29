@@ -5,6 +5,10 @@ case object Orange extends Item
 
 object ShoppingCart {
 
+  def main(args: Array[String]) = println(process(args))
+
+  def process(items: Array[String]) = f"£${checkOut(scanItems(items.toList)) / 100.0}%.2f"
+
   def priceUp(item: Item) = item match {
     case Apple => 60
     case Orange => 25
@@ -23,8 +27,7 @@ object ShoppingCart {
     }
   }
 
-  def main(args: Array[String]) {
-    println(s"${checkOut(scanItems(args.toList))}p")
-  }
+
+
 
 }

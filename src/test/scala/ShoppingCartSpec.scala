@@ -25,7 +25,7 @@ class ShoppingCartSpec extends FlatSpec with Matchers {
       ShoppingCart.scanItems(List("Apple", "Banana", "Orange"))
   }
 
-  "shoppingCart" should "take a list of Apples and Oranges" in {
-    ShoppingCart.main(Array("Apple","Orange"))
+  "shoppingCart process" should "take a list of Apples and Oranges, returning a price" in {
+    ShoppingCart.process(Array("Apple", "Apple", "Orange", "Apple")) should === ("£2.05")
   }
 }
